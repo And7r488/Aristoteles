@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myndasafn - Trúnáðarmyndir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--link rel="stylesheet" href="css/pico.sand.css">
+    <link rel="stylesheet" href="css/sand-theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/popup.css"-->
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <nav class="container-fluid">
+      <div class="nav-container">
+        <a class="brand" href="index.html">
+          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#5C4033" />
+            <text x="50%" y="56%" text-anchor="middle" font-family="Merriweather, serif" font-size="20" fill="#F5F1E9">A</text>
+          </svg>
+          <strong class="logo">Aristóteles</strong>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">≡</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Heim</a></li>
+            <li><a href="biography.html">Ævisaga</a></li>
+            <li><a href="works.html">Verk</a></li>
+            <li><a href="concepts.html">Hugtök</a></li>
+            <li><a href="legacy.html">Arfleifð</a></li>
+            <li><a href="references.html">Heimildir</a></li>
+            <li><button id="logout-btn" class="button" style="background: #F5F1E9; color: #5C4033; border: 1.5px solid #D4AF37; padding: 0.35rem 0.85rem; border-radius: 0.25rem; font-size: 1rem; font-family: 'Merriweather', serif;">Έξοδος</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Myndasafn</h1>
+                <p class="lead">Trúnaðarmyndir</p>
+                <p class="welcome-msg">Velkomin, <span id="user-name"></span>!</p>
+            </div>
+        </section>
+
+        <!-- Gallery Introduction -->
+        <section class="gallery-intro">
+            <p>
+                Þessi síða er aðeins aðgengileg innskráðum notendum. Hér eru birtar 
+                sérstakar myndir og efni tengd Aristótelesi og heimspeki hans.
+            </p>
+        </section>
+
+        <section class="gallery-grid">
+            <h2>Aristóteles - Myndir og Listir</h2>
+            <div class="image-gallery">
+                <figure>
+                    <img src="images/600.webp" alt="Aristóteles mynd 1" loading="lazy">
+                    <figcaption>Klassísk mynd af Aristótelesi</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/700.webp" alt="Aristóteles mynd 2" loading="lazy">
+                    <figcaption>Portrett af Aristótelesi</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/800.webp" alt="Aristóteles mynd 3" loading="lazy">
+                    <figcaption>Aristóteles í hugleiðingu</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/845.webp" alt="Aristóteles mynd 4" loading="lazy">
+                    <figcaption>Heimspekingi í athöfn</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/900.webp" alt="Aristóteles mynd 5" loading="lazy">
+                    <figcaption>Kennsla og heimspeki</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/1200.webp" alt="Aristóteles mynd 6" loading="lazy">
+                    <figcaption>Aristóteles meðal nemenda</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="gallery-note">
+            <h2>Um Myndasafnið</h2>
+            <p>
+                Myndir í þessum myndasafni eru trúnaðarmál og aðeins aðgengilegar 
+                innskráðum notendum. Þær sýna Aristóteles, heimspeki hans og söguleg efni.
+            </p>
+        </section>
+    </main>
+
+    <footer class="container-fluid">
+        <p><small>© 2025 Aristóteles Vefsíða | Trúnaðarsvæði | <a href="#" id="logout-link">Útskrá</a></small></p>
+    </footer>
+
+    <script src="js/popup.js"></script>
+    <script>
+        // Check if user is logged in
+        function checkAccess() {
+            const user = sessionStorage.getItem('aristotleUser');
+            if (!user) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            const userData = JSON.parse(user);
+            if (!userData.loggedIn) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Display user name
+            const userNameEl = document.getElementById('user-name');
+            if (userNameEl && userData.fullname) {
+                userNameEl.textContent = userData.fullname;
+            }
+        }
+        
+        // Logout functionality
+        function setupLogout() {
+            const logoutBtn = document.getElementById('logout-btn');
+            const logoutLink = document.getElementById('logout-link');
+            
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sessionStorage.removeItem('aristotleUser');
+                    showToast('Þú hefur verið skráð/ur út');
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 1000);
+                });
+            }
+            
+            if (logoutLink) {
+                logoutLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sessionStorage.removeItem('aristotleUser');
+                    showToast('Þú hefur verið skráð/ur út');
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 1000);
+                });
+            }
+        }
+        
+        // Initialize on page load
+        checkAccess();
+        document.addEventListener('DOMContentLoaded', setupLogout);
+
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Image lightbox functionality
+        const images = document.querySelectorAll('.image-gallery img');
+        
+        // Create lightbox overlay with spinner
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-spinner">
+                <svg class="spinner" viewBox="0 0 50 50" role="img" aria-label="Hleður mynd">
+                    <g transform="translate(25,25)">
+                        <circle cx="0" cy="0" r="20" stroke="#E8E4DC" stroke-width="6" fill="none"/>
+                        <path d="M20 0 A20 20 0 0 1 6 19" stroke="#D4AF37" stroke-width="6" stroke-linecap="round" fill="none"></path>
+                    </g>
+                </svg>
+                <p class="lightbox-loader-text">Hleður mynd...</p>
+            </div>
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" src="" alt="">
+        `;
+        document.body.appendChild(lightbox);
+        
+        const lightboxImg = lightbox.querySelector('.lightbox-content');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+        const lightboxSpinner = lightbox.querySelector('.lightbox-spinner');
+        
+        // Add click event to all images
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxSpinner.style.display = 'flex';
+                lightboxImg.style.display = 'none';
+                
+                // Create new image to preload with delay to show spinner
+                const newImg = new Image();
+                newImg.onload = () => {
+                    // Add minimum delay to show spinner
+                    setTimeout(() => {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightboxSpinner.style.display = 'none';
+                        lightboxImg.style.display = 'block';
+                    }, 4000);
+                };
+                newImg.src = img.src;
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

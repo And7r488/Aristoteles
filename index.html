@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aristóteles - Heimspeki og Arfleifð</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--link rel="stylesheet" href="css/pico.sand.css">
+    <link rel="stylesheet" href="css/sand-theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/popup.css"-->
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <nav class="container-fluid">
+      <div class="nav-container">
+        <a class="brand" href="index.html">
+          <img src="images/Aristoteles-takn.svg" alt="Aristóteles Logo" width="48" height="48" style="filter: brightness(0) invert(1);">
+          <strong class="logo">Aristóteles</strong>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">≡</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Heim</a></li>
+            <li><a href="biography.html">Ævisaga</a></li>
+            <li><a href="works.html">Verk</a></li>
+            <li><a href="concepts.html">Hugtök</a></li>
+            <li><a href="legacy.html">Arfleifð</a></li>
+            <li><a href="references.html">Heimildir</a></li>
+            <li><a href="#" id="login-link"><span class="icon-user-check"></span>Είσοδος</a></li>
+        </ul>
+      </div>
+    </nav>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('images/Aristoteles thinking.webp');">
+            <div class="hero-content">
+                <h1>Aristóteles</h1>
+                <p class="lead">Heimspekinni og listfræði til fyrirmyndar</p>
+            </div>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/Alexander_and_Aristotle.webp" alt="Alexander og Aristóteles">
+                <div class="slide-content">
+                    <h2>Kennari Alexanders Mikla</h2>
+                    <p>Leiddi einn áhrifamesta heröðlingjann í sögunni</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="images/Aristotelis_De_Moribus_ad_Nicomachum.webp" alt="Aristótelís De Moribus">
+                <div class="slide-content">
+                    <h2>Dyggðasiðfræði</h2>
+                    <p>Siðfræði byggð á dygðum og jafnvægi - gullna miðlundin</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="images/Aristotle_Altemps_Inv8575.jpg.webp" alt="Aristóteles">
+                <div class="slide-content">
+                    <h2>Aristóteles - Faðir Vestrænnar Heimspeki</h2>
+                    <p>384-322 f.Kr. | Stageira, Grikkland</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="images/images.webp" alt="Aristóteles mynd">
+                <div class="slide-content">
+                    <h2>Stofnandi Lýkeions</h2>
+                    <p>Skólinn sem móta hafði vestræna menningu í aldur</p>
+                </div>
+            </div>
+            
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+            
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <h2>Um Aristóteles</h2>
+            <p>
+                Aristóteles (384-322 f.Kr.) var einn áhrifamesti heimspekingi vesturheimskuldunnar. 
+                Hann stofnaði sína eigin heimspekilönd, Líkenaeum, og lagði grunn að mörgum 
+                vísindagreinum og heimspekilegum greinum sem við stundum í dag.
+            </p>
+            <p>
+                Hans framlag nær til siðfræði, stjórnmála, rökfræði, frumspeki, gagnfræði og lista. 
+                Hans hugmyndir mótuðu vestræna hugsun í yfir 2000 ár.
+            </p>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="quick-links">
+            <div class="grid">
+                <article>
+                    <h3>📖 Ævisaga</h3>
+                    <p>Lærðu um líf Aristótelesar, uppruna hans og námsgöngu.</p>
+                    <a href="biography.html" role="button">Sjá meira</a>
+                </article>
+                <article>
+                    <h3>📚 Heimspekileg Verk</h3>
+                    <p>Skoðaðu helstu verk og ritsmíðir hans.</p>
+                    <a href="works.html" role="button">Sjá meira</a>
+                </article>
+                <article>
+                    <h3>💭 Lykilhugtök</h3>
+                    <p>Kynntu þér meginhugtök hans heimspeki.</p>
+                    <a href="concepts.html" role="button">Sjá meira</a>
+                </article>
+                <article>
+                    <h3>🌍 Áhrif og Arfleifð</h3>
+                    <p>Finndu um áhrif Aristótelesar á heiminn.</p>
+                    <a href="legacy.html" role="button">Sjá meira</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Key Points Section -->
+        <section class="key-points">
+            <h2>Helstu Framlog</h2>
+            <div class="grid">
+                <div class="concept-card">
+                    <h3>Dyggðasiðfræði</h3>
+                    <p>Hennar sem byggjast á fagnaði og jafnvægi milli of og of lítils.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Rökfræði</h3>
+                    <p>Klassísk rökfræðikerfi sem skilgreinir gildar röksemdafærslur.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Frumspeki</h3>
+                    <p>Rannsókn á eðli veruleika og grunnatriðum tilverunnar.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Stjórnmál</h3>
+                    <p>Kenningar um stjórnunarform og rétt samfélag.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2>Tímalína - Líf Aristótelesar</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>384 f.Kr.</h3>
+                        <p><strong>Fæddur í Stageira</strong></p>
+                        <p>Aristóteles fæddist í Stageira, Grikkland. Faðir hans var læknir konungs Makedóníu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>367 f.Kr.</h3>
+                        <p><strong>Innritun í Akademíu Platons</strong></p>
+                        <p>17 ára gamall fór hann til Atómu og gekk í Akademíu Platons, þar sem hann dvaldi í 20 ár.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>347 f.Kr.</h3>
+                        <p><strong>Andlát Platons</strong></p>
+                        <p>Eftir andlát Platons yfirgæfi Aristóteles Akademíuna og fór til Assos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>343 f.Kr.</h3>
+                        <p><strong>Kennari Alexanders mikla</strong></p>
+                        <p>Filippus konungur köllaði Aristóteles til Makedóníu til að kenna syni sínum, Alexander mikla.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>335 f.Kr.</h3>
+                        <p><strong>Stofnun Lýkeions</strong></p>
+                        <p>Aristóteles sneri aftur til Atómu og stofnaði sinn eigin skóla, Lýkeion (Lykeion).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>323 f.Kr.</h3>
+                        <p><strong>Andlát Alexanders mikla</strong></p>
+                        <p>Eftir að Alexander lést, flaug Aristóteles frá Atómu vegna and-makedónsku andrumsöfu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>322 f.Kr.</h3>
+                        <p><strong>Andlát</strong></p>
+                        <p>Aristóteles lést í Chalkis, Eubóeu, 62 ára gamall, af náttúrulegum orsökum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            <p><small>© 2025 Aristóteles Vefsíða | <a href="references.html">Heimildir</a> | <a href="references.html#about">Um</a> | <a href="https://plato.stanford.edu/entries/aristotle/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy</a></small></p>
+        </div>
+    </footer>
+
+    <!-- Aðstoð button -->
+    <button id="assistBtn" class="assist-btn">?</button>
+
+    <!-- Chat box -->
+    <div id="chatBox">
+      <form id="chatForm">
+        <h3>Hvernig get ég aðstoðað þig?</h3>
+
+        <label for="chatMsg">Skrifaðu skilaboð...</label>
+        <textarea id="chatMsg" name="chatMsg" required></textarea>
+
+        <label for="chatName">Nafn:</label>
+        <input type="text" id="chatName" name="chatName" required>
+
+        <label for="chatEmail">Tölvupóstur:</label>
+        <input type="email" id="chatEmail" name="chatEmail" required>
+
+        <input type="submit" value="Senda skilaboð" class="send-form">
+      </form>
+    </div>
+
+    <!-- Modal overlay -->
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal" role="document" aria-labelledby="modal-title">
+            <div class="modal-header">
+                <h3 id="modal-title" class="lead">Um Aristóteles</h3>
+                <button class="modal-close" id="modal-close" aria-label="Loka">✕</button>
+            </div>
+            <div class="modal-body">
+                <p>Aristóteles (384–322 f.Kr.) var grískur heimspekingur sem lagði grunn að dyggðasiðfræði, rökfræði, frumspeki og náttúrufræði.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="button" id="modal-ok">Loka</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Slideshow functionality
+        let slideIndex = 1;
+        let slideTimer;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            
+            // Auto advance
+            clearTimeout(slideTimer);
+            slideTimer = setTimeout(() => {
+                slideIndex++;
+                showSlides(slideIndex);
+            }, 5000);
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // Initialize slideshow
+        showSlides(slideIndex);
+
+        // Aðstoð button toggles chat box visibility
+        const assistBtn = document.querySelector('#assistBtn');
+        const chatBox = document.querySelector('#chatBox');
+        const chatForm = document.querySelector('#chatForm');
+
+        if (assistBtn && chatBox) {
+            assistBtn.addEventListener('click', () => {
+                chatBox.classList.toggle('active');
+            });
+        }
+
+        // Handle chat form submission
+        if (chatForm) {
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.querySelector('#chatName').value;
+                const email = document.querySelector('#chatEmail').value;
+                const message = document.querySelector('#chatMsg').value;
+                
+                // Show success message
+                alert(`Takk fyrir skilaboðin, ${name}! Við munum svara þér á ${email} sem fyrst.`);
+                
+                // Reset form and close chatbox
+                chatForm.reset();
+                chatBox.classList.remove('active');
+            });
+        }
+    </script>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal chatbox-modal">
+        <div class="modal-header">
+            <h3>Innskráning</h3>
+            <button class="modal-close" id="close-login-modal" aria-label="Loka">✖</button>
+        </div>
+        <div class="modal-body chatbox-body">
+            <form class="chatbox-form" id="login-form">
+                <label for="login-email">Netfang</label>
+                <input type="email" id="login-email" name="email" required placeholder="Sláðu inn netfang">
+                <label for="login-fullname">Fullt nafn</label>
+                <input type="text" id="login-fullname" name="fullname" required placeholder="Sláðu inn fullt nafn">
+                <label for="login-password">Lykilorð</label>
+                <input type="password" id="login-password" name="password" required minlength="6" placeholder="Lykilorð (min. 6 stafir)">
+                <button type="submit" class="button" style="margin-top:1.2rem;">Skrá mig inn</button>
+            </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

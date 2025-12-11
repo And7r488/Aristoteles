@@ -1,0 +1,134 @@
+/* Timeline Visual */
+.timeline-visual {
+    position: relative;
+    padding-left: 40px;
+    margin-left: 10px;
+}
+
+.timeline-visual::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #D4AF37;
+}
+
+.timeline-visual::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #5C4033;
+    border-radius: 50%;
+    border: 3px solid #F5F1E9;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #D4AF37;
+    border-radius: 50%;
+}
+
+/* Table Mix */
+.tablemix {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.tablemix thead {
+    background-color: #5C4033;
+    color: #F5F1E9;
+}
+
+.tablemix th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #D4AF37;
+}
+
+.tablemix td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #eee;
+}
+
+.tablemix tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.tablemix tbody tr:hover {
+    background-color: #F5F1E9;
+}
+
+/* Column Utilities */
+.columns {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.column-card {
+    background-color: #F5F1E9;
+    border-left: 4px solid #D4AF37;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.column-card h3 {
+    color: #5C4033;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .columns-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .columns-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .columns-2,
+    .columns-3,
+    .columns-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .tablemix {
+        font-size: 0.9rem;
+    }
+    
+    .tablemix th,
+    .tablemix td {
+        padding: 0.5rem;
+    }
+}

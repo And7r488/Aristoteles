@@ -1,0 +1,129 @@
+/* Navigation Toggle */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0.5rem;
+}
+
+.nav-toggle-label span {
+    width: 25px;
+    height: 3px;
+    background-color: #5C4033;
+    transition: all 0.3s ease;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 900px) {
+    .nav-toggle-label {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F5F1E9;
+        flex-direction: column;
+        list-style: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #D4AF37;
+    }
+    
+    .nav-toggle:checked ~ .nav-links {
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+    
+    .nav-links li {
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-toggle-label span:nth-child(1) {
+        transition: rotate 0.3s ease, translate 0.3s ease;
+    }
+    
+    .nav-toggle-label span:nth-child(2) {
+        transition: opacity 0.3s ease;
+    }
+    
+    .nav-toggle-label span:nth-child(3) {
+        transition: rotate 0.3s ease, translate 0.3s ease;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        rotate: 45deg;
+        translate: 10px 10px;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        rotate: -45deg;
+        translate: 10px -10px;
+    }
+}
+
+/* Animations */
+.animate-fade {
+    animation: fadeInOut 0.5s ease;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.animate-up {
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form Conditionals */
+input[type="email"]:invalid {
+    border-color: #d32f2f;
+}
+
+input[type="email"]:valid {
+    border-color: #4caf50;
+}
+
+input[type="password"]:valid {
+    border-color: #4caf50;
+}
+
+/* Theme Variables */
+:root {
+    --color-primary: #5C4033;
+    --color-accent: #D4AF37;
+    --color-background: #F5F1E9;
+    --color-text: #333333;
+}
+
+html[data-theme="dark"] {
+    --color-primary: #F5F1E9;
+    --color-background: #2a2a2a;
+    --color-text: #F5F1E9;
+}

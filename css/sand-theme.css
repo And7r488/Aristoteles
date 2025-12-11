@@ -1,0 +1,46 @@
+:root,
+:host {
+  --pico-color-sand-950: #2b1f16;
+  --pico-color-sand-900: #3c2c1f;
+  --pico-color-sand-850: #4e3828;
+  --pico-color-sand-800: #604531;
+  --pico-color-sand-750: #72513a;
+  --pico-color-sand-700: #846d44;
+  --pico-color-sand-650: #978a4e;
+  --pico-color-sand-600: #a9a658;
+  --pico-color-sand-550: #bbc262;
+  --pico-color-sand-500: #cddf6c;
+  --pico-color-sand-450: #d9e680;
+  --pico-color-sand-400: #e5ed94;
+  --pico-color-sand-350: #f1f4a8;
+  --pico-color-sand-300: #f5f7b8;
+  --pico-color-sand-250: #f8f9c8;
+  --pico-color-sand-200: #fbfbda;
+  --pico-color-sand-150: #fcfce6;
+  --pico-color-sand-100: #fdfdf2;
+  --pico-color-sand-50: #fefefe;
+  --pico-color-sand: #cddf6c;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+  --pico-color-sand-950: #fefefe;
+  --pico-color-sand-900: #fdfdf2;
+  --pico-color-sand-850: #fcfce6;
+  --pico-color-sand-800: #fbfbda;
+  --pico-color-sand-750: #f8f9c8;
+  --pico-color-sand-700: #f5f7b8;
+  --pico-color-sand-650: #f1f4a8;
+  --pico-color-sand-550: #e5ed94;
+  --pico-color-sand-500: #d9e680;
+  --pico-color-sand-450: #cddf6c;
+  --pico-color-sand-400: #bbc262;
+  --pico-color-sand-350: #a9a658;
+  --pico-color-sand-300: #978a4e;
+  --pico-color-sand-250: #846d44;
+  --pico-color-sand-200: #72513a;
+  --pico-color-sand-150: #604531;
+  --pico-color-sand-100: #4e3828;
+  --pico-color-sand-50: #3c2c1f;
+  }
+}
